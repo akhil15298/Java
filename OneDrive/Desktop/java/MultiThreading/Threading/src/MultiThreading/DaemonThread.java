@@ -18,6 +18,8 @@ public class DaemonThread extends Thread {
         daemonThread.setDaemon(true); // Setting the thread as daemon
         daemonThread.start();
 
+        System.out.println("Main thread is runningg: " + Thread.currentThread().getName());
+
         DaemonThread userThread = new DaemonThread();
         userThread.start();
 
