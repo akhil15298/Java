@@ -25,13 +25,15 @@ public class MovieBookingApp extends Thread {
         
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         MovieBookingApp user1 = new MovieBookingApp();
         MovieBookingApp user2 = new MovieBookingApp();
         user1.seatsToBook = 7;
         user2.seatsToBook = 6;
-
-        user1.start();
+        //user1.currentThread().sleep(1000);
+         //user1.sleep(1000);
         user2.start();
+       
+        user1.start();
     }
 }
